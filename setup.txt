@@ -1,0 +1,17 @@
+mkdir -p ~/dev/landing-page-engine
+
+cd ~/dev/landing-page-engine
+
+python3.12 -m venv venv
+
+source venv/bin/activate 
+python -V
+out: Python 3.12.4
+
+pip install django python-decouple
+
+mkdir backend
+cd backend
+django-admin start project ccahome .
+
+pip freeze > requirements.txt
